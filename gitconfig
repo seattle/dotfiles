@@ -1,0 +1,9 @@
+[user]
+	name = Seattle113
+	email = i113.seattle@gmail.com
+[color]
+	ui = auto
+[github]
+	user = seattle
+[core]
+	editor = vim --noplugin

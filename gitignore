@@ -1,0 +1,29 @@
+#python specific
+*.pyc
+build/*
+dist/*
+MANIFEST
+
+## generic files to ignore
+*~
+*.lock
+*.DS_Store
+*.swp
+*.out
+
+
+#RoR files
+.bundle
+db/*.sqlite3
+config/databse.yml
+config/settings.yml
+db/schema.rb
+log/*.log
+tmp/
+
+#RubyMine/JetBrain Project files
+*.iml
+.idea/
+
+#Redis DB
+dump.rdb
