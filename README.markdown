@@ -7,7 +7,7 @@ Works on GNU/Linux and Mac OSX.
 ##Installation
 In your home directory:
 
-    git clone https://github.com/saghul/dotfiles.git
+    git clone https://github.com/seattle/dotfiles.git
 
     cd dotfiles && ./install.sh
 
