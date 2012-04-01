@@ -1,6 +1,6 @@
 # dotfiles
 
-My dotfiles. Includes configuration files for bash, git, darcs and (experimental) zsh
+My dotfiles. Includes configuration files for bash, git, rvm
 
 Works on GNU/Linux and Mac OSX.
 

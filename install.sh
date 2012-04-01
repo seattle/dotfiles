@@ -5,7 +5,7 @@ BACKUP_DIR="dotfiles-backup.$NOW.$$"
 CURRENT_DIR=`pwd`
 
 ## Backup existing configuration
-FILES=".profile .bashrc .gitconfig .gitignore .darcs .ackrc"
+FILES=".bash_profile .profile .bashrc .gitconfig .gitignore .ackrc .zlogin .zshrc"
 pushd ~ > /dev/null 2>&1
 mkdir $BACKUP_DIR
 mv -f $FILES $BACKUP_DIR 2> /dev/null
@@ -14,11 +14,14 @@ echo "Current configuration has been backed up to $BACKUP_DIR"
 
 ## Copy new configuration
 # dotfiles
-DOTFILES="profile bashrc gitconfig gitignore ackrc"
+DOTFILES="profile bashrc gitconfig gitignore ackrc zlogin zshrc"
 for F in $DOTFILES
 do
     \cp $F ~/.$F
 done
+ln -s ~/.profile ~/.bash_profile
+
+
 # custom scripts
 mkdir -p ~/bin
 \cp bin/* ~/bin/
@@ -36,7 +39,5 @@ fi
 read -p "Download bash completion file for Git (y/n)? "
 [ "$REPLY" == "y" ] && curl -s https://raw.github.com/git/git/master/contrib/completion/git-completion.bash -o ~/.git-completion.bash
 
-
 echo "All done!"
 exit 0
-
