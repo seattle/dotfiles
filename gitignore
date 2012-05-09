@@ -15,7 +15,7 @@ MANIFEST
 #RoR files
 .bundle
 db/*.sqlite3
-config/databse.yml
+config/database.yml
 config/settings.yml
 db/schema.rb
 log/*.log

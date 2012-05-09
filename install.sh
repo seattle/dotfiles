@@ -5,7 +5,7 @@ BACKUP_DIR="dotfiles-backup.$NOW.$$"
 CURRENT_DIR=`pwd`
 
 ## Backup existing configuration
-FILES=".bash_profile .profile .bashrc .gitconfig .gitignore .ackrc .zlogin .zshrc"
+FILES=".bash_profile .profile .bashrc .gitconfig .gitignore .ackrc .zlogin .zshrc .tmux.conf .htoprc .gemrc .rvmrc"
 pushd ~ > /dev/null 2>&1
 mkdir $BACKUP_DIR
 mv -f $FILES $BACKUP_DIR 2> /dev/null
@@ -14,7 +14,7 @@ echo "Current configuration has been backed up to $BACKUP_DIR"
 
 ## Copy new configuration
 # dotfiles
-DOTFILES="profile bashrc gitconfig gitignore ackrc zlogin zshrc"
+DOTFILES="profile bashrc gitconfig gitignore ackrc zlogin zshrc tmux.conf htoprc gemrc rvmrc"
 for F in $DOTFILES
 do
     \cp $F ~/.$F
